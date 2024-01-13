@@ -1,0 +1,784 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+html  {font-size: 15px;}
+@media only screen and (max-width: 1280px)    {html {font-size: 80%;}}
+@media only screen and (max-width: 1124px)    {html {font-size: 75%;}}
+@media only screen and (max-width: 1080px)    {html {font-size: 68%;}}
+@media only screen and (max-width: 992px)    {html {font-size: 65%;}}
+@media only screen and (max-width: 768px)    {html {font-size: 60%;}}
+@media only screen and (max-width: 440px)    {html {font-size: 55%;}}
+/* ========================= BASIC CODES ============================= */
+.container   {
+    width: 1440px;
+    margin: auto;
+}
+@media only screen and (max-width: 1540px)    {.container {width: 92%;}}
+@media only screen and (max-width: 1280px)    {.container {width: 92%;}}
+@media only screen and (max-width: 992px)    {.container {width: 95%;}}
+@media only screen and (max-width: 768px)    {.container {width: 100%; padding: 10px;}}
+
+
+
+
+.con11   {
+    width: 1170px;
+    margin: auto;
+}
+@media only screen and (max-width: 992px)    {.con11 {width: 95%;}}
+@media only screen and (max-width: 768px)    {.con11 {width: 100%; padding: 10px;}}
+
+
+
+:root    {
+    /*              colors           */
+    --primary-color: #ebc700;
+    --secondary-color: #f3772f;
+    --tertiary-color: #eeae00;
+    --quaternary-color: ;
+
+    /*       gradient colors       */
+    --gradient-color-1: linear-gradient(to right, var(--primary-color)36%, var(--secondary-color)15%, var(--tertiary-color) 49%);
+
+    /*       gray-scale colors       */
+    --gray-color-1: #777;
+    --gray-color-2: #eee;
+    --gray-color-3: #ccc;
+    --gray-color-4: #555;
+    --gray-color-5: #999;
+
+    /*       white-colors       */
+    --white-color-1: #f0f5f9;
+    --white-color-2: #f5f0f0;
+    --white-color-3: #faf8f9;
+    --white-color-4: #f8f9fa;
+    --white-color-5: #f8f9f8;
+
+    /*         black and white       */
+    --black-color: #000;
+    --white-color: #fff;
+    --transparent-color: rgba(0, 0, 0, 0);
+
+    /*              fonts            */
+    --primary-font: ;
+    --secondary-font: ;
+    --tertiary-font: ;
+    --quaternary-font: ;
+
+    --font-color: #082940;
+
+    /*              font-families       */
+    --primary-font-family: ;
+    --secondary-font-family: ;
+    --tertiary-font-family: ;
+    --quaternary-font-family: ;
+
+    /*              padding-sizes       */
+    --padding-size-1: 10px;
+    --padding-size-2: 1rem;
+    --padding-size-3: 20px;
+    --padding-size-4: 25px;
+    --padding-size-5: 2rem;
+    --padding-size-6: 38px;
+    --padding-size-7: 3.5rem;
+    --padding-size-8: 4rem;
+    --padding-size-9: 5rem;
+    --padding-size-10: 6rem;
+    
+    /*              margin-sizes       */
+    --margin-size-1: 10px;
+    --margin-size-2: 1rem;
+    --margin-size-3: 20px;
+    --margin-size-4: 25px;
+    --margin-size-5: 2rem;
+    --margin-size-6: 38px;
+    --margin-size-7: 3.5rem;
+    --margin-size-8: 4rem;
+    --margin-size-9: 5rem;
+    --margin-size-10: 6rem;
+}
+::selection     {}
+
+
+.gradient-bg {
+  background: linear-gradient(35deg, var(--primary-color), var(--secondary-color), var(--tertiary-color));
+  background-size: 200% 200%; /* Increase size for smoother animation */
+  animation: gradientAnimation 4s ease infinite alternate; /* Change duration and timing function as needed */
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%; /* Start position */
+  }
+  30% {
+    background-position: 30% 0%; /* Start position */
+  }
+  60% {
+    background-position: 40% 60%; /* Start position */
+  }
+  100% {
+    background-position: 100% 50%; /* End position */
+  }
+}
+
+
+h1 {
+    font-size: 3rem; /* Adjust size as needed */
+  }
+  
+  h2 {
+    font-size: 2.5rem; /* Adjust size as needed */
+  }
+  
+  h3 {
+    font-size: 2rem; /* Adjust size as needed */
+  }
+  
+  h4 {
+    font-size: 1.5rem; /* Adjust size as needed */
+  }
+  
+  h5 {
+    font-size: 1.25rem; /* Adjust size as needed */
+  }
+  
+  h6 {
+    font-size: 1rem; /* Adjust size as needed */
+  }
+  p  {
+    font-size: 1rem; /* Adjust size as needed */
+  }
+  a  {  
+    text-decoration: none;
+  }
+  li  {
+    list-style: none;
+  }
+
+  /* Button Styles */
+.main-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover State */
+  .main-btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  /* Width, height, and color of scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track (background) of the scrollbar */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle (thumb) of the scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+  }
+
+
+.section-padding   {
+    padding: 100px 0px;
+}
+.section-h1  {
+    font-size: 4rem;
+}
+/* ========================= BASIC CODES ============================= */
+
+  
+  
+
+
+
+/* ============================= SECTION 1 =============================== */
+.header   {
+  width: 100%;
+  height: 70px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: var(--white-color-4);
+}
+.navbar-container   {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo  a  {
+  font-size: 25px;
+  color: var(--tertiary-color);
+}
+.navbar-collapse   {
+}
+.navbar-nav   {
+}
+.nav-item   {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.nav-link   {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0px 15px;
+  text-transform: uppercase;
+  color: var(--tertiary-color);
+  transition: all 0.3s ease;
+}
+.active, .nav-link:hover   {
+  color: var(--secondary-color);
+}
+
+.toggle  {
+  display: none;
+}
+
+
+@media only screen and (max-width: 1280px) {
+  .navbar .collapse {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: calc(100% - 100px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: var(--white-color-4);
+      opacity: 0.7;
+      z-index: 9999;
+      transition: all .6s ease;
+  }
+
+  .navbar .menuactive {
+      right: 0;
+  }
+
+
+
+  .navbar .navbar-collapse .navbar-nav {
+      width: 100%;
+      text-align: center;
+  }
+
+  .navbar .navbar-collapse .navbar-nav .nav-item {
+    display: block;
+    margin: 15px 0px;
+  }
+
+  .navbar .navbar-collapse .navbar-nav .nav-link {
+      font-size: 20px;
+      font-weight: 600;
+  }
+
+
+
+  .toggle {
+      display: block;
+      padding: 15px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      z-index: 10000;
+  }
+
+  .toggle .bar {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: var(--secondary-color);
+      margin: 4px;
+      transition: all .6s ease;
+  }
+
+  .menuactive.toggle .bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+  }
+
+  .menuactive.toggle .bar:nth-child(2) {
+      transform: translateX(-8px);
+      opacity: 0;
+  }
+
+  .menuactive.toggle .bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+  }
+}
+/* ============================= SECTION 1 =============================== */
+
+/* ============================= SECTION 2 =============================== */
+
+.home   {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url('../images/home-bg.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: rgba(248, 249, 250, 0.9); /* Adjust the opacity here */
+}
+.home-container   {
+  height: 100%;
+}
+.home-container .row, .col-12   {
+  height: 100%;
+}
+.home-container .col1   {
+  display: flex;
+  align-items: center;
+}
+.home-container .col1 .home-content   {
+  position: relative;
+}
+
+h1, h2, p {
+  position: relative; /* Ensure text elements respect z-index */
+  /* Add styles to make them visible */
+}
+
+.home-container .col1 .home-content h1   {
+  color: var(--font-color);
+}
+.home-container .col1 .home-content h2   {
+  color: var(--font-color);
+  
+}
+.home-container .col1 .home-content h2 .auto-type   {
+  color: var(--secondary-color);
+}
+.home-container .col1 .home-content p   {
+  font-size: 14px;
+}
+.home-container .col1 .home-content .home-btns   {
+  margin-top: 10px;
+}
+.home-container .col1 .home-content .home-btns .linkedin   {
+  margin-right: 15px;
+}
+.home-container .col1 .home-content .home-btns .home-btn   {
+  padding: 10px 30px;
+  display: inline-block;
+  cursor: pointer;
+  color: var(--white-color);
+  font-size: 18px;
+  border-radius: 5px;
+}
+.home-container .col1 .home-content .home-btns home-btn i   {}
+/* Cursor */
+.typed-cursor {
+  color: var(--secondary-color);
+}
+
+/* If fade out option is set */
+.typed-fade-out {
+}
+.home-container .col2   {}
+.home-container .col2   {
+  order: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-container .col2 .img-box   {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border: 10px solid var(--secondary-color);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.home-container .col2 .img-box img   {
+  width: 100%;
+  height: 100%;
+}
+
+
+@media only screen and (max-width: 992px)    {
+  
+.home-container .col-12   {
+  height: 50%;
+}
+.home-container .col2   {
+  order: -1;
+  display: flex;
+}
+
+
+
+}
+/* ============================= SECTION 2 =============================== */
+
+/* ============================= SECTION 3 =============================== */
+.about   {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 100px 0px;
+  background-color: var(--white-color-4);
+}
+.about h1   {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: center;
+}
+.about-container   {}
+.about-container .row   {
+  padding: 15px 10px;
+}
+.about-container .desriptipn   {}
+.about-container .desriptipn p   {
+  font-size: 16px;
+  color: var(--font-color);
+  opacity: 0.6;
+}
+.about-container .personal-detail   {}
+/* Add your custom CSS styles */
+
+.container {
+  padding: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+strong {
+  font-weight: bold;
+  margin-right: 5px;
+  color: var(--secondary-color);
+}
+
+.about-container .experience   {}
+.about-container .experience h2   {
+  color: var(--secondary-color);
+}
+/* Add your custom CSS styles */
+
+.experience-card {
+  height: auto;
+  background-color: var(--white-color-4);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.6s ease;
+}
+.experience-card:hover {              
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+  0 6px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-5px);
+}
+
+.experience-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.experience-duration {
+  color: #888;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.experience-description {
+  font-size: 14px;
+  color: #555;
+  opacity: 0.6;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Adjust styles as needed to match your overall website design */
+
+/* ============================= SECTION 3 =============================== */
+
+/* ============================= SECTION 4 =============================== */
+
+.myskills {
+  width: 100%;
+  padding: 100px 0;
+  background-color: var(--white-color-4);
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.myskills h1   { 
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.myskills-container {
+  
+}
+
+.row {
+  
+}
+
+.col-12 {
+  
+}
+.col-lg-6 {
+  
+}
+
+.skill-box {
+  padding: 30px;
+  
+}
+
+.skill-row {
+  
+}
+.skill-row1 {
+  
+}
+
+.skill-col {
+  
+}
+.skill-name {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+.progress {
+  height: 20px;
+  background-color: #eee; /* Change this to your desired color */
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset,
+  0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.progress-bar  {
+  height: 20px;
+  font-size: 14px;
+  background-color: var(--tertiary-color);
+}
+
+
+/* ============================= SECTION 4 =============================== */
+
+/* ============================= SECTION 5 =============================== */
+
+
+.mycourse {
+  width: 100%;
+  padding: 100px 0;
+  background-color: var(--white-color-4);
+  position: relative;
+  top: 0;
+  left: 0;
+
+}
+
+.mycourse-container {
+  /* Your styles here */
+}
+
+.mycourse-container h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mycourse-container .row {
+  /* Your styles here */
+}
+
+.mycourse-container .col-12,
+.col-md-6,
+.col-lg-4 {
+  /* Your styles here */
+}
+
+.mycourse-container .mycourse-card {
+  width: 100%;
+  padding: 20px;
+  transition: all 0.6s ease;
+}
+.mycourse-container .mycourse-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.mycourse-container .mycourse-card h3   {
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+.mycourse-container ul {
+  /* Your styles here */
+}
+
+.mycourse-container li {
+  /* Your styles here */
+}
+
+.mycourse-container a {
+  font-size: 16px;
+  color: var(--font-color);
+  opacity: 0.6;
+}
+.mycourse-container a:hover {
+  color: var(--secondary-color);
+  opacity: 1;
+}
+/* ============================= SECTION 5 =============================== */
+
+/* ============================= SECTION 6 =============================== */
+.whatdoido   {
+  width: 1px p;
+  padding: 110px 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: var(--white-color-4);
+}
+.whatdoido h2   {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--secondary-color);
+}
+.whatdoido .row   {}
+.whatdoido .row .whatdoido-card   {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: all .6s ease;
+}
+.whatdoido .row .whatdoido-card:hover   {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.whatdoido .row .whatdoido-card i   {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+.whatdoido .row .whatdoido-card i   {}
+.whatdoido .row .whatdoido-card h3   {
+  margin-bottom: 10px;
+  color: var(--font-color);
+  opacity: 0.6;
+  font-size: 2rem;
+}
+.whatdoido .row .whatdoido-card p   {
+  font-size: 14px;
+  opacity: 0.5;
+}
+/* ============================= SECTION 6 =============================== */
+
+/* ============================= SECTION 7 =============================== */
+.section7   {}
+.section7-container   {}
+/* ============================= SECTION 7 =============================== */
+
+/* ============================= SECTION 8 =============================== */
+.section8   {}
+.section8-container   {}
+/* ============================= SECTION 8 =============================== */
+
+/* ============================= SECTION 9 =============================== */
+.section9   {}
+.section9-container   {}
+/* ============================= SECTION 9 =============================== */
+
+/* ============================= SECTION 10 =============================== */
+.section10   {}
+.section10-container   {}
+/* ============================= SECTION 10 =============================== */
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+
+
+
+@media only screen and (max-width: 1440px)    {}
+@media only screen and (max-width: 1366px)    {}
+@media only screen and (max-width: 1280px)    {}
+@media only screen and (max-width: 1080px)    {}
+@media only screen and (max-width: 992px)    {}
+@media only screen and (max-width: 768px)    {}
+@media only screen and (max-width: 440px)    {}
+
+
+
+
+
+
+*/
