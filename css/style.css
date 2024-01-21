@@ -40,9 +40,9 @@ html  {font-size: 15px;}
 
 :root    {
     /*              colors           */
-    --primary-color: #ebc700;
-    --secondary-color: #f3772f;
-    --tertiary-color: #eeae00;
+    --primary-color: #ff214f;
+    --secondary-color: #e9274e;
+    --tertiary-color: #ff2189;
     --quaternary-color: ;
 
     /*       gradient colors       */
@@ -218,125 +218,125 @@ h1 {
 /* ========================= BASIC CODES ============================= */
 
   
-  
+  body   {
+    background-color: var(--white-color-4);
+    color: var(--font-color);
+  }
 
 
 
 /* ============================= SECTION 1 =============================== */
-.header   {
+.header     {
   width: 100%;
   height: 70px;
   position: relative;
   top: 0;
   left: 0;
-  background-color: var(--white-color-4);
+  animation: anileft 1s linear 0s 1 ;
 }
-.navbar-container   {
-  height: 70px;
+@keyframes anileft {
+  0%  { transform: translateX(-10px); opacity: 0; }
+  100%  { transform: translateX(0px); opacity: 1; }
+}
+.header .container     {
+  width: 90%;
+  height: 100%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.logo  a  {
-  font-size: 25px;
-  color: var(--tertiary-color);
+.header .logo     {
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
 }
-.navbar-collapse   {
+.header .nav     {}
+.header .nav .nav-lists     {
+  list-style: none;
+  margin-bottom: 0;
 }
-.navbar-nav   {
+.header .nav .nav-lists .nav-item     {
+  display: inline;
 }
-.nav-item   {
+.header .nav .nav-lists .nav-item .nav-link     {
   display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-.nav-link   {
-  font-size: 15px;
-  font-weight: 500;
+  text-decoration: none;
+  color: var(--font-color);
   margin: 0px 15px;
-  text-transform: uppercase;
-  color: var(--tertiary-color);
+  font-size: 18px;
   transition: all 0.3s ease;
 }
-.active, .nav-link:hover   {
-  color: var(--secondary-color);
+.header .nav .nav-lists .nav-item .nav-link:hover     {
+  color: var(--primary-color);
 }
 
-.toggle  {
+.header .toggle     {
   display: none;
 }
-
-
-@media only screen and (max-width: 1280px) {
-  .navbar .collapse {
-      position: fixed;
-      top: 0;
-      right: -300px;
-      width: 300px;
-      height: calc(100% - 100px);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      background-color: var(--white-color-4);
-      opacity: 0.7;
-      z-index: 9999;
-      transition: all .6s ease;
-  }
-
-  .navbar .menuactive {
-      right: 0;
-  }
+.header .toggle .bar     {}
 
 
 
-  .navbar .navbar-collapse .navbar-nav {
-      width: 100%;
-      text-align: center;
-  }
+@media only screen and (max-width: 1280px)    {
+  
+.header .nav     {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--white-color-4);
+  opacity: 0.7;
+  z-index: 8;
+  transition: all .6s ease;
+}
+.shownav.nav     {
+  right: 0;
+}
+.header .nav .nav-lists     {}
+.header .nav .nav-lists .nav-item     {
+  display: block;
+}
+.header .nav .nav-lists .nav-item .nav-link     {
+  display: block;
+  margin: 20px 0px;
+  font-size: 20px;
+}
 
-  .navbar .navbar-collapse .navbar-nav .nav-item {
-    display: block;
-    margin: 15px 0px;
-  }
 
-  .navbar .navbar-collapse .navbar-nav .nav-link {
-      font-size: 20px;
-      font-weight: 600;
-  }
+.header .toggle     {
+  display: block;
+  padding: 20px;
+  z-index: 9;
+}
+.header .toggle .bar     {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 4px;
+  transition: all.3s ease;
+}
 
 
+.shownav.toggle .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
 
-  .toggle {
-      display: block;
-      padding: 15px;
-      outline: none;
-      border: none;
-      cursor: pointer;
-      z-index: 10000;
-  }
+.shownav.toggle .bar:nth-child(2) {
+  transform: translateX(-8px);
+  opacity: 0;
+}
 
-  .toggle .bar {
-      display: block;
-      width: 30px;
-      height: 3px;
-      background-color: var(--secondary-color);
-      margin: 4px;
-      transition: all .6s ease;
-  }
+.shownav.toggle .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
-  .menuactive.toggle .bar:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-  }
-
-  .menuactive.toggle .bar:nth-child(2) {
-      transform: translateX(-8px);
-      opacity: 0;
-  }
-
-  .menuactive.toggle .bar:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-  }
 }
 /* ============================= SECTION 1 =============================== */
 
@@ -353,6 +353,11 @@ h1 {
   background-size: cover;
   background-position: center;
   z-index: 0;
+  animation: anibotom 1s linear 0s 1 ;
+}
+@keyframes anibotom {
+  0%  { transform: translateY(-10px); opacity: 0; }
+  100%  { transform: translateY(0px); opacity: 1; }
 }
 
 .overlay {
@@ -419,7 +424,13 @@ h1, h2, p {
 /* If fade out option is set */
 .typed-fade-out {
 }
-.home-container .col2   {}
+.home-container .col2   {
+  animation: bounce 1s linear 0s infinite alternate ;
+}
+@keyframes bounce {
+  0%  { transform: translateY(-10px);  }
+  100%  { transform: translateY(0px);  }
+}
 .home-container .col2   {
   order: 0;
   display: flex;
@@ -501,6 +512,14 @@ ul {
 li {
   margin-bottom: 10px;
   font-size: 18px;
+}
+li a   {
+  color: var(--font-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+li a:hover   {
+  color: var(--secondary-color);
 }
 
 strong {
@@ -733,26 +752,253 @@ strong {
 /* ============================= SECTION 6 =============================== */
 
 /* ============================= SECTION 7 =============================== */
-.section7   {}
-.section7-container   {}
+.portfolio {
+  width: 100%;
+  padding: 100px 0;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.portfolio h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: center;
+  text-transform: uppercase;
+}
+.portfolio-container {
+  
+}
+.portfolio-container .portfolio-card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.portfolio-container .portfolio-card .portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--white-color-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.6s ease;
+}
+.portfolio-container .portfolio-card:hover .portfolio-overlay {
+  height: 100%;
+  opacity: .8;
+  visibility: visible;
+}
+.portfolio-container .portfolio-card .portfolio-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.portfolio-container .portfolio-card .portfolio-overlay .btn, .btn a {
+  width: 100px;
+  margin: auto;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  display: inline;
+}
+.portfolio-container .portfolio-card .img-box {
+  width: 100%;
+}
+.portfolio-container .portfolio-card .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ============================= SECTION 7 =============================== */
 
 /* ============================= SECTION 8 =============================== */
-.section8   {}
-.section8-container   {}
+.contact    {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 100px 0px;
+}
+.contact h1   {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+.contact-container   {}
+
+.contact .container {
+  width: 700px;
+  max-width: 700px;
+  padding: 30px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 9px;
+}
+
+.contact form {}
+
+.contact .rows {
+  display: flex;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.contact .col {
+  width: 50%;
+}
+
+.contact .col1 {
+  margin-right: 10px;
+}
+
+.contact .col2 {
+  margin-left: 10px;
+}
+
+.contact label {
+  color: var(--font-color);
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.contact input[type="text"] {
+  width: 100%;
+  height: 35px;
+  padding: 0px 10px;
+  border-radius: 9px;
+  border: 1px solid var(--gray-color-2);
+  color: var(--font-color);
+  outline: none;
+  background: transparent;
+  transition: all 1s ease;
+}
+
+.contact textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border-radius: 9px;
+  border: 1px solid var(--gray-color-2);
+  color: var(--font-color);
+  outline: none;
+  background: transparent;
+  transition: all 1s ease;
+}
+
+.contact ::placeholder {
+  color: var(--font-color);
+  font-size: 15px;
+  opacity: 0.5;
+}
+
+/* Select the submit button */
+.container input[type="submit"] {
+  width: 200px;
+  height: 40px;
+  border-radius: 9px;
+  outline: none;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+  transition: all .5s ease;
+}
+
+.container input[type="submit"]:hover {
+  background: var(--secondary-color);
+
+}
+@media only screen and (max-width: 500px) {
+
+  .rows {
+      display: block;
+  }
+
+  .col {
+      width: 100%;
+  }
+
+  .col1 {
+      margin-right: 0px;
+      margin-bottom: 20px;
+  }
+
+  .col2 {
+      margin-left: 0px;
+  }
+}
 /* ============================= SECTION 8 =============================== */
 
 /* ============================= SECTION 9 =============================== */
-.section9   {}
-.section9-container   {}
+.footer   {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #202021;
+  color: var(--gray-color-3);
+  padding-top: 100px;
+
+}
+.footer-container   {}
+.footer-container .row   {
+  padding: 30px;
+}
+.footer-container .row1  {}
+.footer-container .row1 .text  {}
+.footer-container .row1 .text h3  {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.footer-container .row1 .text p  {
+  font-size: 15px;
+}
+.footer-container .row1 .text .social-icons  {
+  margin-top: 20px;
+}
+.footer-container .row1 .text .social-icons i  {
+  font-size: 25px;
+  margin-right: 20px;
+  color: var(--white-color);
+  transition: all .6s ease;
+}
+.footer-container .row1 .text .social-icons i:hover  {
+  color: var(--primary-color);
+}
+.footer-container .row1 .text ul  {}
+.footer-container .row1 .text ul li  {}
+.footer-container .row1 .text ul li a  {
+  color: var(--gray-color-3);
+  transition: all .5s ease;
+}
+.footer-container .row1 .text ul li a:hover  {
+  color: var(--primary-color);
+  transform: translateX(15px);
+}
+.footer-container .row2  {}
+.footer-container .row2 p  {
+  font-size: 15px;
+  text-align: center;
+}
+.footer-container .row2 p a  {
+  color: var(--primary-color);
+  font-weight: bolder;
+}
 /* ============================= SECTION 9 =============================== */
-
-/* ============================= SECTION 10 =============================== */
-.section10   {}
-.section10-container   {}
-/* ============================= SECTION 10 =============================== */
-
-
 
 
 
