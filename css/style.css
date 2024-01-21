@@ -694,18 +694,11 @@ strong {
 }
 
 .mycourse-container li {
-  /* Your styles here */
-}
-
-.mycourse-container a {
   font-size: 16px;
   color: var(--font-color);
   opacity: 0.6;
 }
-.mycourse-container a:hover {
-  color: var(--secondary-color);
-  opacity: 1;
-}
+
 /* ============================= SECTION 5 =============================== */
 
 /* ============================= SECTION 6 =============================== */
