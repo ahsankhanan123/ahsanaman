@@ -834,7 +834,6 @@ strong {
 
 .contact .container {
   width: 700px;
-  max-width: 700px;
   padding: 30px;
   margin: 40px auto;
   background-color: rgba(255, 255, 255, 0.1);
@@ -915,22 +914,30 @@ strong {
   background: var(--secondary-color);
 
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
+  .contact .container {
+    width: 95%;
+    padding: 30px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 9px;
+  }
 
-  .rows {
+  .contact .rows {
       display: block;
   }
 
-  .col {
+  .contact .col {
       width: 100%;
   }
 
-  .col1 {
+  .contact .col1 {
       margin-right: 0px;
       margin-bottom: 20px;
   }
 
-  .col2 {
+  .contact .col2 {
       margin-left: 0px;
   }
 }
