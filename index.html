@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link
@@ -28,14 +33,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Ahsann Aman</title>
+    <title>Ahsan</title>
   </head>
   <body>
     <!-- ============================== SECTION 1 =================================== -->
 
     <header class="header">
       <div class="container">
-        <a href="" class="logo">Ahsan Aman</a>
+        <a href="" class="logo">AHSAN</a>
 
         <nav class="nav">
           <ul class="nav-lists">
@@ -141,8 +146,6 @@
           <div class="col-12 col-lg-6">
             <ul>
               <li><strong>Name:</strong> Ahsan Aman</li>
-              <li><strong>Age:</strong> 28</li>
-              <li><strong>Birthday:</strong> 06 / June / 1998</li>
               <li><strong>Certification:</strong> Web Development</li>
               <li>
                 <strong>Youtube Channel:</strong> 
@@ -155,7 +158,6 @@
 
           <div class="col-12 col-lg-6">
             <ul>
-              <li><strong>Address:</strong> Peshawar, Pakistan</li>
               <li><strong>Email:</strong> ahsanaman883@gmail.com</li>
               <li><strong>Freelance:</strong> Available</li>
             </ul>
@@ -789,51 +791,80 @@
     <!-- ============================== SECTION 6 =================================== -->
 
     <!-- ============================== SECTION 7 =================================== -->
-    <section class="portfolio">
+    <section class="portfolio"  id="portfolio">
       <h1>Portfolio</h1>
       <div class="portfolio-container container">
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="portfolio-card">
-              <div class="portfolio-overlay">
-                <div class="text">
-                  <h1>Travel App</h1>
-                  <button class="btn"><a href="https://github.com/ahsankhanan123/demo1">GitHub</a></button>
-                </div>
-              </div>
-              <div class="img-box">
-                <img src="./images/portfolio1.png" width="100%" alt="" />
-              </div>
-            </div>
-          </div>
 
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="portfolio-card">
-              <div class="portfolio-overlay">
-                <div class="text">
-                  <h1>Food App</h1>
-                  <button class="btn"><a href="https://github.com/ahsankhanan123/food">GitHub</a></button>
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class=" ">
+                  <div class="portfolio-card">
+                    <div class="portfolio-overlay">
+                      <div class="text">
+                        <h1>Travel App</h1>
+                        <button class="btn"><a href="https://github.com/ahsankhanan123/demo1">GitHub</a></button>
+                      </div>
+                    </div>
+                    <div class="img-box">
+                      <img src="./images/portfolio1.png" width="100%" alt="" />
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="img-box">
-                <img src="./images/portfolio2.png" width="100%" alt="" />
-              </div>
-            </div>
-          </div>
 
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="portfolio-card">
-              <div class="portfolio-overlay">
-                <div class="text">
-                  <h1>FoodHub</h1>
-                  <button class="btn"><a href="https://github.com/ahsanaman883/foodhub">GitHub</a></button>
+              <div class="swiper-slide">
+                <div class=" ">
+                  <div class="portfolio-card">
+                    <div class="portfolio-overlay">
+                      <div class="text">
+                        <h1>Food App</h1>
+                        <button class="btn"><a href="https://github.com/ahsankhanan123/food">GitHub</a></button>
+                      </div>
+                    </div>
+                    <div class="img-box">
+                      <img src="./images/portfolio2.png" width="100%" alt="" />
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="img-box">
-                <img src="./images/portfolio3.png" width="100%" alt="" />
+              
+              <div class="swiper-slide">
+                <div class=" ">
+                  <div class="portfolio-card">
+                    <div class="portfolio-overlay">
+                      <div class="text">
+                        <h1>FoodHub</h1>
+                        <button class="btn"><a href="https://github.com/ahsanaman883/foodhub">GitHub</a></button>
+                      </div>
+                    </div>
+                    <div class="img-box">
+                      <img src="./images/portfolio3.png" width="100%" alt="" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
           </div>
+        
+        
+
+
+     
+
+
         </div>
       </div>
     </section>
@@ -944,6 +975,8 @@
     <!-- ============================== SECTION 9 =================================== -->
 
     <!--     JavaScript     -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>

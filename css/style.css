@@ -247,7 +247,8 @@ h1 {
   align-items: center;
 }
 .header .logo     {
-  font-size: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
   text-decoration: none;
   color: var(--primary-color);
 }
@@ -766,7 +767,7 @@ strong {
   position: relative;
   width: 100%;
   height: auto;
-  margin: 10px;
+  margin: 0px;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -812,6 +813,60 @@ strong {
   height: 100%;
   object-fit: cover;
 }
+
+.portfolio-container .swiper {
+  width: 600px;
+  height: auto;
+  padding: 0;
+}
+.portfolio-container .swiper-wrapper   {
+  width: 100%;
+  height: 100%;
+}
+.portfolio-container .swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+}
+.portfolio-container .swiper {}
+.portfolio-container .swiper-wrapper {}
+.portfolio-container .swiper-slide {}
+.portfolio-container .swiper-button-prev,
+.portfolio-container .swiper-button-next    {
+    /* Set the desired width and height */
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    /* You can also customize other styles like background color, font size, etc. */
+    background-color: var(--primary-color);
+    color: #fff;
+    /* Add any other styles you want */
+}
+.portfolio-container .swiper-button-prev:after,
+.portfolio-container .swiper-button-next:after    {
+  font-size: 18px;
+}
+.portfolio-container .swiper-pagination-bullet {}
+.portfolio-container .swiper-pagination-bullet-active {
+  background-color: var(--primary-color);
+}
+.portfolio-container .swiper-pagination-bullet-active:after {
+  background-color: var(--primary-color);
+}
+.portfolio-container .swiper-pagination-bullet:after {
+  background-color: var(--primary-color);
+}
+.portfolio-container .swiper-pagination-progressbar {}
 
 /* ============================= SECTION 7 =============================== */
 
