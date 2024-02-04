@@ -40,9 +40,10 @@ html  {font-size: 15px;}
 
 :root    {
     /*              colors           */
-    --primary-color: #ff214f;
-    --secondary-color: #e9274e;
-    --tertiary-color: #ff2189;
+    --primary-color: #6623fe;
+    --primary-color-light: #d6c9f5;
+    --secondary-color: #9166f5;
+    --tertiary-color: #c11be2;
     --quaternary-color: ;
 
     /*       gradient colors       */
@@ -61,6 +62,9 @@ html  {font-size: 15px;}
     --white-color-3: #faf8f9;
     --white-color-4: #f8f9fa;
     --white-color-5: #f8f9f8;
+    --white-color-6: #e6e9f2;
+    --white-color-7: #f1f4f9;
+    --white-color-8: #eff2f7;
 
     /*         black and white       */
     --black-color: #000;
@@ -219,7 +223,7 @@ h1 {
 
   
   body   {
-    background-color: var(--white-color-4);
+    background-color: var(--white-color-6);
     color: var(--font-color);
   }
 
@@ -484,7 +488,6 @@ h1, h2, p {
   left: 0;
   width: 100%;
   padding: 100px 0px;
-  background-color: var(--white-color-4);
 }
 .about h1   {
   font-size: 4rem;
@@ -543,6 +546,9 @@ strong {
 }
 
 .about-container .experience   {}
+.about-container .experience.col-12   {
+  height: auto;
+}
 .about-container .experience h2   {
   color: var(--secondary-color);
 }
@@ -550,10 +556,11 @@ strong {
 
 .experience-card {
   height: auto;
-  background-color: var(--white-color-4);
+  background-image: linear-gradient(to top, var(--white-color-8), var(--white-color-8))  ;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: all 0.6s ease;
 }
 .experience-card:hover {              
@@ -590,7 +597,6 @@ strong {
 .myskills {
   width: 100%;
   padding: 100px 0;
-  background-color: var(--white-color-4);
   position: relative;
   top: 0;
   left: 0;
@@ -662,7 +668,6 @@ strong {
 .mycourse {
   width: 100%;
   padding: 100px 0;
-  background-color: var(--white-color-4);
   position: relative;
   top: 0;
   left: 0;
@@ -689,6 +694,7 @@ strong {
 .col-md-6,
 .col-lg-4 {
   /* Your styles here */
+  height: auto;
 }
 
 .mycourse-container .mycourse-card {
@@ -722,7 +728,6 @@ strong {
   position: relative;
   top: 0;
   left: 0;
-  background-color: var(--white-color-4);
 }
 .whatdoido h2   {
   font-size: 4rem;
@@ -739,11 +744,21 @@ strong {
 }
 .whatdoido .row .whatdoido-card:hover   {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  
 }
 .whatdoido .row .whatdoido-card i   {
-  font-size: 4rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 30px;
   margin-bottom: 20px;
   color: var(--secondary-color);
+  opacity: 0.8;
 }
 .whatdoido .row .whatdoido-card i   {}
 .whatdoido .row .whatdoido-card h3   {
@@ -783,6 +798,7 @@ strong {
   margin: 0px;
   overflow: hidden;
   border-radius: 10px;
+  
 }
 .portfolio-container .portfolio-card .portfolio-overlay {
   position: absolute;
@@ -831,6 +847,8 @@ strong {
   width: 600px;
   height: auto;
   padding: 0;
+  
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .portfolio-container .swiper-wrapper   {
   width: 100%;
@@ -905,7 +923,8 @@ strong {
   padding: 30px;
   margin: 40px auto;
   background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-image: linear-gradient(to top, var(--white-color-8), var(--white-color-8))  ;
   border-radius: 9px;
 }
 
@@ -1017,9 +1036,12 @@ strong {
   position: relative;
   top: 0;
   left: 0;
-  background-color: #202021;
-  color: var(--gray-color-3);
+  
+  background-image: linear-gradient(to left, var(--white-color-8), var(--white-color-8))  ;
+  color: var(--font-color);
   padding-top: 100px;
+  border-top: 2px solid var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
 }
 .footer-container   {}
@@ -1031,6 +1053,7 @@ strong {
 .footer-container .row1 .text h3  {
   font-size: 25px;
   margin-bottom: 20px;
+  color: var(--secondary-color);
 }
 .footer-container .row1 .text p  {
   font-size: 15px;
@@ -1043,6 +1066,8 @@ strong {
   margin-right: 20px;
   color: var(--white-color);
   transition: all .6s ease;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .footer-container .row1 .text .social-icons i:hover  {
   color: var(--primary-color);
@@ -1050,7 +1075,7 @@ strong {
 .footer-container .row1 .text ul  {}
 .footer-container .row1 .text ul li  {}
 .footer-container .row1 .text ul li a  {
-  color: var(--gray-color-3);
+  color: var(--font-color);
   transition: all .5s ease;
 }
 .footer-container .row1 .text ul li a:hover  {
